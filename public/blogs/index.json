@@ -1,5 +1,18 @@
 [
   {
+    "slug": "windows",
+    "title": "Windows右键菜单管理程序",
+    "tags": [
+      "右键管理",
+      "右键菜单"
+    ],
+    "date": "2026-01-26T02:35",
+    "summary": "ContextMenuManager，一个纯粹的Windows右键菜单管理程序",
+    "cover": "/blogs/windows/7d9542b0c1fdf1c6.png",
+    "hidden": false,
+    "category": "软件"
+  },
+  {
     "slug": "zong-se-chen-ai-2",
     "title": "破解版丨棕色尘埃2",
     "tags": [
