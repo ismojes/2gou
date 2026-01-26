@@ -8,16 +8,20 @@ import { BlogPreview } from '@/components/blog-preview'
 import { loadBlog, type BlogConfig } from '@/lib/load-blog'
 import { useReadArticles } from '@/hooks/use-read-articles'
 import LiquidGrass from '@/components/liquid-grass'
+import { useConfigStore } from '@/app/(home)/stores/config-store'
+import { PasswordVerify } from '@/components/password-verify'
 
 export default function Page() {
 	const params = useParams() as { id?: string | string[] }
 	const slug = Array.isArray(params?.id) ? params.id[0] : params?.id || ''
 	const router = useRouter()
 	const { markAsRead } = useReadArticles()
+	const { siteContent } = useConfigStore()
 
 	const [blog, setBlog] = useState<{ config: BlogConfig; markdown: string; cover?: string } | null>(null)
 	const [error, setError] = useState<string | null>(null)
 	const [loading, setLoading] = useState<boolean>(true)
+	const [isVerified, setIsVerified] = useState(false)
 
 	useEffect(() => {
 		let cancelled = false
@@ -31,6 +35,29 @@ export default function Page() {
 					setBlog(blogData)
 					setError(null)
 					markAsRead(slug)
+
+					// 检查是否需要密码验证
+					const category = blogData.config.category
+					if (siteContent.enablePasswordAccess && siteContent.passwordAccessPassword && 
+						siteContent.passwordAccessCategories?.includes(category)) {
+						// 检查是否已经验证过
+						const isVerified = localStorage.getItem(`password_${category}`) === 'verified'
+						const storedHash = localStorage.getItem(`password_${category}_hash`)
+						const currentHash = siteContent.passwordAccessPassword
+						
+						// 如果验证过且密码没有改变，则直接显示内容
+						if (isVerified && storedHash === currentHash) {
+							setIsVerified(true)
+						} else {
+							// 清除旧的验证状态
+							localStorage.removeItem(`password_${category}`)
+							localStorage.removeItem(`password_${category}_hash`)
+							setIsVerified(false)
+						}
+					} else {
+						// 不需要密码验证
+						setIsVerified(true)
+					}
 				}
 			} catch (e: any) {
 				if (!cancelled) setError(e?.message || '加载失败')
@@ -42,7 +69,7 @@ export default function Page() {
 		return () => {
 			cancelled = true
 		}
-	}, [slug, markAsRead])
+	}, [slug, markAsRead, siteContent])
 
 	const title = useMemo(() => (blog?.config.title ? blog.config.title : slug), [blog?.config.title, slug])
 	const date = useMemo(() => dayjs(blog?.config.date).format('YYYY年 M月 D日'), [blog?.config.date])
@@ -66,6 +93,16 @@ export default function Page() {
 
 	if (!blog) {
 		return <div className='text-secondary flex h-full items-center justify-center text-sm'>文章不存在</div>
+	}
+
+	// 检查是否需要密码验证
+	const category = blog.config.category
+	const needPassword = siteContent.enablePasswordAccess && siteContent.passwordAccessPassword && 
+		siteContent.passwordAccessCategories?.includes(category)
+
+	// 如果需要密码验证且未验证，显示密码验证模态框
+	if (needPassword && !isVerified) {
+		return <PasswordVerify category={category} onVerify={() => setIsVerified(true)} />
 	}
 
 	return (
