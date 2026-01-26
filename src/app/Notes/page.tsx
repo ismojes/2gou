@@ -104,14 +104,14 @@ export default function Page() {
 								}}>
 									{article.cover && (
 										<img
-											src={article.cover}
-											alt={article.title}
-											style={{ 
-												objectFit: 'cover', 
-												width: '100%', 
-												height: '100%'
-											}}
-										/>
+							src={article.cover}
+							alt={article.title}
+							style={{ 
+								objectFit: 'contain', 
+								width: '100%', 
+								height: '100%'
+							}}
+						/>
 									)}
 								</div>
 								
