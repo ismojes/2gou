@@ -8,5 +8,10 @@
   "cover": "/blogs/RBD19DHTBJDQ/bb633e35d07484b9.png",
   "hidden": false,
   "category": "人物卡",
-  "downloadLinks": []
+  "downloadLinks": [
+    {
+      "name": "Github下载",
+      "url": "https://blog.2gou.ren/Download/0bb6a34c887a82af.zip"
+    }
+  ]
 }
