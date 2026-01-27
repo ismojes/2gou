@@ -4,9 +4,9 @@
 > 身为一名普通上班族的主角一直过着毫无变化的平凡生活，某天心血来潮在离家女性的寄宿网站上登录了住处的主角很快迎来了寄宿对象───身上披着怪兽大衣，自称“怪兽公主”的奇怪女子。
 ***
 ## 🌄 游戏截图
-![](local-image:jjohumng)
-![](local-image:oktyq4ls)
-![](local-image:kbqfmbdt)
+![](/blogs/KaijuPrincess/2f0439a5387b5b4d.webp)
+![](/blogs/KaijuPrincess/d7e8e3f00bce09bd.webp)
+![](/blogs/KaijuPrincess/16b03cb48bc2e57c.webp)
 ***
 
 ## 💟游戏特色💟
