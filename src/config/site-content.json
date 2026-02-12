@@ -1,8 +1,8 @@
 {
 	"meta": {
-		"title": "[崽崽日志]",
-		"description": "陌科崽的个人博客，发布一些日常收集来的软件、游戏，还有一些乱七八糟瞎折腾的研究笔记教程之类的。",
-		"username": "陌科崽"
+		"title": "[陌子枭的BLOG]",
+		"description": "陌子枭的个人博客，发布一些日常收集来的软件、游戏，还有一些乱七八糟瞎折腾的研究笔记教程之类的。",
+		"username": "陌子枭"
 	},
 	"theme": {
 		"colorBrand": "#35bfab",
@@ -40,7 +40,7 @@
 		{
 			"id": "github",
 			"type": "github",
-			"value": "https://github.com/RT622",
+			"value": "https://github.com/ismojes",
 			"label": "Github",
 			"order": 3
 		},
@@ -54,7 +54,7 @@
 		{
 			"id": "email",
 			"type": "email",
-			"value": "Twodog@88.com",
+			"value": "2200375208@qq.com",
 			"label": "",
 			"order": 1
 		}
