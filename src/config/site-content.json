@@ -52,7 +52,7 @@
 	"clockShowSeconds": false,
 	"summaryInContent": false,
 	"isCachePem": true,
-	"hideEditButton": false,
+	"hideEditButton": true,
 	"enableCategories": true,
 	"currentHatIndex": 3,
 	"hatFlipped": false,
@@ -62,7 +62,7 @@
 		"Chara",
 		"Games"
 	],
-	"passwordAccessPassword": "110110",
+	"passwordAccessPassword": "hhx011215",
 	"beian": {
 		"text": "",
 		"link": ""
