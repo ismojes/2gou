@@ -32,7 +32,7 @@
 			"url": "/images/art/1d3268aedf45e840.png"
 		}
 	],
-	"currentArtImageId": "852eccdeaa21e3b7",
+	"currentArtImageId": "1d3268aedf45e840",
 	"backgroundImages": [
 		{
 			"id": "",
@@ -51,13 +51,13 @@
 	],
 	"clockShowSeconds": false,
 	"summaryInContent": false,
-	"isCachePem": true,
+	"isCachePem": false,
 	"hideEditButton": false,
 	"enableCategories": true,
 	"currentHatIndex": 3,
 	"hatFlipped": false,
-	"enableChristmas": true,
-	"enablePasswordAccess": true,
+	"enableChristmas": false,
+	"enablePasswordAccess": false,
 	"passwordAccessCategories": [
 		"Chara",
 		"Games"
