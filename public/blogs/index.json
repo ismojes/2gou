@@ -2,16 +2,31 @@
   {
     "slug": "mojes",
     "title": "安卓丨乌云影视_1.0.26_去广告版 – 你想看的这里都有",
-    "tags": [],
+    "tags": [
+      "安卓",
+      "影视"
+    ],
     "date": "2026-03-22T16:10",
     "summary": "安卓丨乌云影视_1.0.26_去广告版 – 你想看的这里都",
-    "cover": "/blogs/mojes/4e1ce1760f3c0473.png",
+    "cover": "/blogs/mojes/ffb213010186f788.png",
     "hidden": false,
     "category": "软件",
     "downloadLinks": [
       {
+        "name": "迅雷网盘",
+        "url": "https://pan.xunlei.com/s/VOoKyJTgdlrRD8QfnZivoqf-A1?pwd=hprs"
+      },
+      {
         "name": "夸克网盘",
-        "url": "https://doc.moyingge.eu.cc"
+        "url": "https://pan.quark.cn/s/0f6054153fda"
+      },
+      {
+        "name": "百度网盘",
+        "url": "https://pan.baidu.com/s/1Q15KVQIS8fVoSDndNLwl4Q?pwd=agik"
+      },
+      {
+        "name": "本地下载",
+        "url": "https://share.feijipan.com/s/Gd2Zx722"
       }
     ],
     "passwordProtected": false,
